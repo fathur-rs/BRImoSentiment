@@ -6,3 +6,4 @@ airflow-webserver.pid
 airflow-scheduler.log
 logs/
 __pycache__/
+*.ipynb

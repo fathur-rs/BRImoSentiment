@@ -71,7 +71,7 @@ def scrape_reviews(app_id, start_date, end_date):
 # Task function to scrape Google Playstore reviews
 def google_playstore_scrapper(**kwargs):
     ti = kwargs["ti"]
-    app_id = 'id.bmri.livin'
+    app_id = 'id.co.bri.brimo'
     end_datetime = datetime.now().replace(minute=0, second=0, microsecond=0)
     start_datetime = end_datetime - timedelta(days=1)
     
@@ -186,9 +186,9 @@ def send_email_alert(**kwargs):
 
 # Define the DAG
 with DAG(
-    'E2E_Livin_Mandiri_Review_Sentiment_Analysis_Inferencing_DAG',
+    'E2E_BRImo_Review_Sentiment_Analysis_Inferencing_DAG',
     default_args=default_args,
-    description='End-to-end DAG for Livin Mandiri review sentiment analysis with inferencing and MongoDB storage',
+    description='End-to-end DAG for BRI Mobile google playstore review sentiment analysis with inferencing and MongoDB storage',
     schedule=None,
     start_date=datetime(2021, 1, 1),
     catchup=False,
